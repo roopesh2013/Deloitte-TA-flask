@@ -1,2 +1,3 @@
 # Deloitte-TA-flask
-Deloitte Technical Assessment - Docker and kubernetes 
+Deloitte Technical Assessment - Docker Application build
+
