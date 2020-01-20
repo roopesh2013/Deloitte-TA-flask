@@ -59,7 +59,7 @@ docker run -d -p 5000:5000 --name deloitte_assesment roop1985/deloitte_flask_app
 
 You can browse the website using
 
-http://0.0.0.0:5000/ or http://<public IP of  instance>:5000/ incase of cloud instances.
+http://0.0.0.0:5000/ or http://public IP of  instance:5000/ incase of cloud instances.
 
  
 
