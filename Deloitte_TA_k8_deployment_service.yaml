@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deloitte-app
+  labels:
+    app: deloitte-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: deloitte-app
+  template:
+    metadata:
+      labels:
+        app: deloitte-app
+    spec:
+      containers:
+      - name: deloitte-flask-app
+        image: roop1985/deloitte_flask_app:deloitte_flask_app
+        ports:
+        - containerPort: 5000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: deloitte-app
+  namespace: default
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 
+    port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: deloitte-app
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
