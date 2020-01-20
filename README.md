@@ -6,6 +6,8 @@ Deloitte Technical Assessment - Docker Application build
 
 roop1985/deloitte_flask_app:deloitte_flask_app
 
+Docker hub url : https://hub.docker.com/repository/docker/roop1985/deloitte_flask_app
+
 
 ### Getting Started
 
