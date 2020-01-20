@@ -2,9 +2,9 @@
 Deloitte Technical Assessment - Kubernetes Deployment
 
 
-### Kubernetes deployment yaml file
+### Kubernetes deployment and service creation yaml file
 
-### Kubernetes service yaml file
+Deloitte_TA_k8_deployment_service.yaml
 
 
 
@@ -24,20 +24,20 @@ you should be having the docker image and necessory port details to do this depl
 
 #### Deployment yaml
 
-Its simple YAML file which should be having API version, deployment, Image and port details.This will help to create the deployment with configured replicas.
+Its simple YAML file which should be having API version, deployment, Image and port details.This will help to create the deployment with configured replicas.The service yaml should be having API version, deployment, loadbalancer details.This will help to configure loadbalancer to the application. 
 
-* command to run the deployment
+* command to run the deployment and service creation.
 
-kubectl apply -f deloitte_TA_kubernetes_deployment.yaml
+$ kubectl apply -f Deloitte_TA_k8_deployment_service.yaml
 
-#### Service yaml
-Its a YAML file which should be having API version, deployment, loadbalancer details.This will help to configure loadbalancer to the application. 
+#### Check the Deployment and service status
+$ kubectl get service
 
-* command to run the service
+$ kubectl describe  service deloitte-app
 
-kubectl apply -f deloitte_TA_kubernetes_service.yaml
+##### Check the Application
 
- 
+$ curl ip address of load balancer:5000
 
 #### Authors
 
